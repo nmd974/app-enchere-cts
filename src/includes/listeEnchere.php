@@ -20,7 +20,7 @@
         <?php 
             $on = 'actif'; // déclarer la variable on pour comparer a la valeur état dans le tableau
             $onstate = false; // déclarer la variable onstate pour rechercher un état actif ou inactif dans le tableau
-            foreach ($_SESSION['DUMMY_ARRAY'] as $etat => $actif ){ // rechercher dans le tableau l'état actif
+            foreach (array_reverse($_SESSION['DUMMY_ARRAY']) as $etat => $actif ){ // rechercher dans le tableau l'état actif
             if ($actif['etat'] == 'actif'){ // si l'état est actif aucune action n'est demander
                 $onstate = true; 
             }
