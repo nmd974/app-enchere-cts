@@ -1,0 +1,14 @@
+{
+    "name": "enchere/poc",
+    "description": "Plateforme d'enchere au centimes",
+    "type": "php",
+    "require": {
+        "php": "^7.4"
+    },
+    "authors": [
+        {
+            "name": "nmd974",
+            "email": "jha.payet@gmail.com"
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+html, body{
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    font-size: 20px;
+    letter-spacing: 5%;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.duree {
+    background: #FF9800;
+    height: 10%;
+    font-size: 1rem;
+    color: white;
+    border-top-left-radius: 4px !important;
+}
+
+#articles .btn-listEnchere {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #FF9800;
+    border: none;
+    width: 160px;
+    height: 35px;
+    font-size: 18px;
+}
+
+#articles .btn-listEnchere:hover {
+    background-color: #81C784;
+}
+
+.btn-listEnchere2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #FF9800!important;
+    border: none;
+    width: 160px;
+    height: 35px;
+    font-size: 18px;
+}
+
+.btn-manager {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #FF9800;
+    border: none;
+    font-size: 18px;
+}
+
+.btn-manager:hover {
+    background-color: #81C784;
+}
+
+.btn-manager.active {
+    background-color: #ecf0f1 !important;
+    border-color: #81C784 !important;
+    cursor: default !important;
+}
+
+.active {
+    cursor: default !important;
+}
+
+.inactif {
+    font-weight: 400;
+    font-size: xx-large;
+    color: grey;
+}
+
+/******** MEDIA QUERIES ********/
+
+@media screen and (max-width: 380px) {
+
+    .card {
+        margin-bottom: 4rem !important;
+    }
+    
+}
