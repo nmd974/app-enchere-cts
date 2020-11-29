@@ -16,7 +16,8 @@
                 'image_upload' => 'no_image.png',
                 'date_fin' => 1606345200,
                 'etat' => 'inactif',
-                'nombre_clic' => 0
+                'nombre_clic' => 0,
+                'gain' => 0
             ]
         ];
     }

@@ -6,8 +6,10 @@
             if($items['id'] == $id){
                 $items['prix_lancement'] = $items['prix_lancement'] + $items['augmentation_prix'];
                 $items['date_fin'] = $items['date_fin'] + $items['augmentation_duree'];
+                $items['gain'] = $items['gain'] + $items['prix_clic'];
                 $_SESSION['DUMMY_ARRAY'][$key]['prix_lancement'] =  $items['prix_lancement'];
                 $_SESSION['DUMMY_ARRAY'][$key]['date_fin'] =  $items['date_fin'];
+                $_SESSION['DUMMY_ARRAY'][$key]['gain'] =  $items['gain'];
             }
         }
     }
