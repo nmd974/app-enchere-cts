@@ -31,9 +31,11 @@
         <?php //Ici on verifie lors du clic sur le bouton s'il y a eu un upload d'image dans ce cas la modif se passe dans la fonction sinon on fait directement les changements du tableau
             if(isset($_POST['submit_parametre']))
                 {
+                    var_dump($_FILES);
+                    var_dump($_POST);
                 if($_POST['image_upload'] != "")
                 {
-                    var_dump($_FILES);
+                
                     validationFormulaireModificationEnchere($_GET['id']);//On lance cette fonction pour pouvoir gérer l'image ajoutée
                 }
                 else
