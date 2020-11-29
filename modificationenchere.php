@@ -33,7 +33,7 @@
                 {
                     var_dump($_FILES);
                     var_dump($_POST);
-                if($_POST['image_upload'] != "")
+                if($_FILES['image_upload']['name'] != "")
                 {
                     echo "COUCOU";
                     validationFormulaireModificationEnchere($_GET['id']);//On lance cette fonction pour pouvoir gérer l'image ajoutée
