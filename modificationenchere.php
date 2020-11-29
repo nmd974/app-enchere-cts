@@ -33,6 +33,7 @@
                 {
                 if($_POST['image_upload'] != "")
                 {
+                    var_dump($_FILES);
                     validationFormulaireModificationEnchere($_GET['id']);//On lance cette fonction pour pouvoir gérer l'image ajoutée
                 }
                 else
