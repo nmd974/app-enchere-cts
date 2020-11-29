@@ -1,18 +1,14 @@
 <?php 
 
-//Ici on gere la modification de l'état de l'enchere
+//Ici on gere la modification de l'état de l'enchere Si c'est le bouton activer ou desactiver
 if(isset($_POST['submit_activer'])){
-    $id = $_POST['indice'];
+    $id = $_POST['indice'];//On stock dans l'input du nom indice l'id en valeur mais il est en display none afin de ne pas passer par l'url
     
-    foreach($_SESSION['DUMMY_ARRAY'] as $key => $items){
+    foreach($_SESSION['DUMMY_ARRAY'] as $key => $items){//pour chaque enchere on va chercher quel endroit du tableau se trouve celui dont on veut modifier selon l'id
         if($items['id'] == $id){
-            if($items['etat'] != 'actif'){
-                $timeTO = (int)$items['duree'];
-                date_default_timezone_set("Indian/Reunion");
-                $_SESSION['DUMMY_ARRAY'][$key]['date_fin'] = mktime(date("H")+ $timeTO, date("i"), date("s"), date("m"), date("d"), date("Y"));
-                $items['etat'] = 'actif';
-                $_SESSION['DUMMY_ARRAY'][$key]['etat'] =  $items['etat'];
-            }
+            date_default_timezone_set("Indian/Reunion");
+            $_SESSION['DUMMY_ARRAY'][$key]['date_fin'] = mktime(date("H")+ (int)$items['duree'], date("i"), date("s"), date("m"), date("d"), date("Y"));
+            $_SESSION['DUMMY_ARRAY'][$key]['etat'] =  'actif'; //A l'emplacement (key) du tableau on change l'etat qui est actif et la date de fin e nsecondes
         }
     }
 }
@@ -20,10 +16,7 @@ if(isset($_POST['submit_desactiver'])){
     $id = $_POST['indice'];
     foreach($_SESSION['DUMMY_ARRAY'] as $key => $items){
         if($items['id'] == $id){
-            if($items['etat'] != 'inactif'){
-                $items['etat'] = 'inactif';
-                $_SESSION['DUMMY_ARRAY'][$key]['etat'] =  $items['etat'];
-            }
+            $_SESSION['DUMMY_ARRAY'][$key]['etat'] =  'inactif'; //A l'emplacement (key) du tableau on change l'etat en inactif
         }
     }
 }

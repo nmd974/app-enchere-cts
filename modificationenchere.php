@@ -33,7 +33,7 @@
                 {
                 if(isset($_FILES))
                 {
-                    validationFormulaireModificationEnchere($_GET['id']);
+                    validationFormulaireModificationEnchere($_GET['id']);//On lance cette fonction pour pouvoir gérer l'image ajoutée
                 }
                 else
                 {
