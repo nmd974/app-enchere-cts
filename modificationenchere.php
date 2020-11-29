@@ -35,7 +35,7 @@
                     var_dump($_POST);
                 if($_POST['image_upload'] != "")
                 {
-                
+                    echo "COUCOU";
                     validationFormulaireModificationEnchere($_GET['id']);//On lance cette fonction pour pouvoir gérer l'image ajoutée
                 }
                 else
