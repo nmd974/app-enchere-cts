@@ -37,6 +37,7 @@ if(isset($_POST['submit_desactiver'])){
                     <th class="align-middle text-center" scope="col">Prix du clic</th>
                     <th class="align-middle text-center" scope="col">Augmentation du prix</th>
                     <th class="align-middle text-center" scope="col">Augmentation durée</th>
+                    <th class="align-middle text-center" scope="col">Gain</th>
                     <th class="align-middle text-center" scope="col">Activer / Desactiver</th>
                 </tr>
             </thead>
@@ -56,6 +57,7 @@ if(isset($_POST['submit_desactiver'])){
                     <td class="align-middle text-center"><?= $items['prix_clic'] ?> €</td>
                     <td class="align-middle text-center"><?= $items['augmentation_prix'] ?> €</td>
                     <td class="align-middle text-center"><?= $items['augmentation_duree'] ?> sec</td>
+                    <td class="align-middle text-center"><?= $items['gain'] ?> €</td>
                     <td class="align-middle text-center">
                         <form method="POST" enctype="multipart/form-data" action="#<?= $items['id']?> ">
                             <input name="indice" value="<?= $items['id'] ?>" style="display: none;">
