@@ -56,8 +56,8 @@
                     $_POST['etat'] = 'inactif';
                     //On ajoute la propriete date_fin à l'enchere à la valeur null cela permettra d'ajouter lors de l'activation de la carte par l'user
                     $_POST['date_fin'] = null;
-                    //On ajoute un nombre de clic à 0
-                    $_POST['nombre_clic'] = 0;
+                    //On ajoute le gain à 0
+                    $_POST['gain'] = 0;
                     // On ajoute toutes les valeurs de $_POST dans le tableau de la variable session
                     array_push($_SESSION['DUMMY_ARRAY'], $_POST);
                     //On envoie le message de confirmation de l'envoie du formulaire et que tout s'est bien passé
@@ -75,8 +75,8 @@
                 $_POST['etat'] = 'inactif';
                 //On ajoute la propriete date_fin à l'enchere à la valeur null cela permettra d'ajouter lors de l'activation de la carte par l'user
                 $_POST['date_fin'] = null;
-                //On ajoute un nombre de clic à 0
-                $_POST['nombre_clic'] = 0;
+                //On ajoute le gain à 0
+                $_POST['gain'] = 0;
                 //On ajoute dans le tableau global
                 array_push($_SESSION['DUMMY_ARRAY'], $_POST);
                 //On confirme que tout s'est bien passé
@@ -144,8 +144,8 @@
                         //On verifie le nom de l'ancienne image si c'est le no_image alors on ne fait rien sinon on supprime l'ancienne image
                         if($_SESSION['DUMMY_ARRAY'][$key]['image_upload'] !== "no_image.png")
                         {
-                            $oldFilename = "ressources/img/" . $_SESSION['DUMMY_ARRAY'][$key]['image_upload'];
-                            unlink( $oldFilename);
+                            $oldFilename = "ressources/img/" . $_SESSION['DUMMY_ARRAY'][$key]['image_upload'];//On recupere l'adresse de l'image dans le dossier
+                            unlink( $oldFilename);//Fonction qui supprime un fichier dans le dossier
                         }
                         $_SESSION['DUMMY_ARRAY'][$key]['description'] =  $_POST['description'];
                         $_SESSION['DUMMY_ARRAY'][$key]['prix_lancement'] =  $_POST['prix_lancement'];
